@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Shopif class="com"></Shopif></title>
+   
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    background-image:url(back.jpg);
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.product-details {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.product-details h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #f08000;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    background-color: #f08000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+.reviews {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.related-products {
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.related-products h2 {
+    margin-bottom: 20px;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 200px;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-item p {
+    margin-top: 5px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Shopify</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-container">
+        <div class="product-image">
+            <img src="sneak1.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1>Stylish Sneakers</h1>
+            <p class="price">1999 Rs</p>
+            <p class="description">
+                These stylish sneakers are perfect for any occasion. Lightweight, durable, and designed with modern aesthetics in mind.
+            </p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            <div id="cart-message" style="display: none; color: green; font-weight: bold;">Added successfully!</div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <p><strong>Shree:</strong> "Great quality, very comfortable shoes. Highly recommended!"</p>
+        </div>
+        <div class="review">
+            <p><strong>Sai:</strong> "I love the design and fit. Worth every penny!"</p>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="sneak2.jpg" alt="Related Product 1">
+                <p>Running Shoes</p>
+                <p>1000 Rs</p>
+            </div>
+            <div class="product-item">
+                <img src="sneak3.jpg" alt="Related Product 2">
+                <p>Casual Loafers</p>
+                <p>1500 Rs</p>
+            </div>
+            <div class="product-item">
+                <img src="sneak4.jpg" alt="Related Product 3">
+                <p>Sports Shoes</p>
+                <p>999 Rs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <h2>Contact Information</h2>
+        <div id="contact-info">
+            <p><strong>Email:</strong> support@shopify.com</p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shopify. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            const cartMessage = document.getElementById('cart-message');
+            cartMessage.style.display = 'block';
+            setTimeout(() => {
+                cartMessage.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
